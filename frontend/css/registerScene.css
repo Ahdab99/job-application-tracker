@@ -1,0 +1,152 @@
+/* Page layout */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f6f7fb;
+  font-family: Arial, sans-serif;
+}
+
+/* Card */
+.auth-card {
+  width: 420px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 28px;
+  text-align: center;
+}
+
+/* Icon */
+.auth-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background: #1d4ed8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+}
+
+/* Text */
+.auth-title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.auth-subtitle {
+  margin: 8px 0 22px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Form */
+.auth-form {
+  text-align: left;
+}
+
+.auth-label {
+  display: block;
+  margin: 12px 0 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 12px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #f9fafb;
+  outline: none;
+}
+
+.auth-input:focus {
+  border-color: #2563eb;
+  background: white;
+}
+
+/* Button */
+.auth-button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #0b1020;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.auth-button:hover {
+  opacity: 0.92;
+}
+
+/* Footer */
+.auth-footer {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #374151;
+  text-align: center;
+}
+
+.auth-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/* Smooth animation allgemein */
+.auth-input,
+.auth-button,
+.auth-link {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+/* Input: Hover (wenn Maus drüber) */
+.auth-input:hover {
+  border-color: #c7d2fe;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.10);
+  transform: translateY(-1px);
+}
+
+/* Input: Focus (wenn du reinklickst und tippst) */
+.auth-input:focus {
+  border-color: #2563eb;
+  background: #ffffff;
+  box-shadow: 0 8px 22px rgba(37, 99, 235, 0.18);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+/* Button: Hover */
+.auth-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* Button: Click (active) */
+.auth-button:active {
+  transform: translateY(0px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* Link: Hover */
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/* Cursor Verhalten fix */
+.auth-label { cursor: pointer; }
+.auth-input { cursor: text; }
+.auth-button { cursor: pointer; }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+
+  <link rel="stylesheet" href="../css/registerScene.css" />
+</head>
+
+<body>
+
+  <main class="auth-page">
+    <section class="auth-card">
+
+      <div class="auth-icon">🎒</div>
+
+      <h1 class="auth-title">Create an account</h1>
+      <p class="auth-subtitle">Sign up to start tracking your job applications</p>
+
+      <form class="auth-form">
+
+        <label class="auth-label" for="fullName">Full Name</label>
+        <input class="auth-input" id="fullName" type="text" placeholder="John Doe" />
+
+        <label class="auth-label" for="email">Email</label>
+        <input class="auth-input" id="email" type="email" placeholder="you@example.com" />
+
+        <label class="auth-label" for="password">Password</label>
+        <input class="auth-input" id="password" type="password" placeholder="••••••••" />
+
+        <label class="auth-label" for="confirmPassword">Confirm Password</label>
+        <input class="auth-input" id="confirmPassword" type="password" placeholder="••••••••" />
+
+        <button class="auth-button" type="button" onclick="window.location.href='signIn.html'"> 
+         Sign Up
+        </button>
+      </form>
+
+      <p class="auth-footer">
+        Already have an account?
+        <a class="auth-link" href="./signIn.html">Sign in</a>
+      </p>
+
+    </section>
+  </main>
+
+</body>
+</html>
