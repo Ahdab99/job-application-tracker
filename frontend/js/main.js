@@ -19,8 +19,17 @@ const grid = document.getElementById("applicationsGrid");
 const overlay = document.getElementById("detailsOverlay");
 const closeBtn = document.getElementById("closeDetails");
 
+const confirmOverlay = document.getElementById("confirmOverlay");
+const confirmYes = document.getElementById("confirmYes");
+const confirmNo = document.getElementById("confirmNo");
+
+const logoutBtn = document.getElementById("logoutBtn");
+const logoutOverlay = document.getElementById("logoutOverlay");
+const logoutYes = document.getElementById("logoutYes");
+const logoutNo = document.getElementById("logoutNo");
+
 // Format date for display (DD/MM/YYYY)
-function formatDateForDisplay(isoDate) {
+function formatDateForDisplay(isoDate) {    
     const [year, month, day] = isoDate.split("-");
     return `${day}/${month}/${year}`;
 }
@@ -110,16 +119,45 @@ document.getElementById("updateBtn").addEventListener("click", () => {
 });
 
 // Delete
-document.querySelector(".delete-btn").addEventListener("click", () => {
+document.getElementById("deleteBtn").addEventListener("click", () => {
+    if (selectedIndex === null) return;
 
+    confirmOverlay.style.display = "flex";
+});
+
+//Confirmation for delete
+confirmNo.addEventListener("click", () => {
+    confirmOverlay.style.display = "none";
+});
+
+confirmYes.addEventListener("click", () => {
     if (selectedIndex === null) return;
 
     user.applications.splice(selectedIndex, 1);
-
     localStorage.setItem("user", JSON.stringify(user));
 
+    confirmOverlay.style.display = "none";
     overlay.style.display = "none";
+
     renderCards();
+});
+
+//Logout Button opens Modal
+logoutBtn.addEventListener("click", () => {
+    logoutOverlay.style.display = "flex";
+});
+
+// No->Close
+logoutNo.addEventListener("click", () => {
+    logoutOverlay.style.display = "none";
+});
+
+// Yes-> Logout  
+logoutYes.addEventListener("click", () => {
+
+    localStorage.removeItem("user");
+
+    window.location.href = "login.html";
 });
 
 //Create new Application button

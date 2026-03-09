@@ -166,3 +166,30 @@
 .auth-card {
     animation: slideInFromLeft 1s ease-out;
 }
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  display: block;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+.input-error {
+  border: 2px solid red;
+}
+
+.password-container {
+  position: relative;
+}
+
+.password-container input {
+  width: 100%;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
