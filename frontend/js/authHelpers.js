@@ -39,7 +39,7 @@ function redirectToLogin(message = "") {
     if (message) {
         setAuthMessage(message);
     }
-    window.location.href = "/frontend/html/login.html";
+    window.location.href = "/html/login.html";
 }
 
 function requireAuth() {

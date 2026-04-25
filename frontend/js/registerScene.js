@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:8081/api/auth";
+const API_BASE_URL = "https://job-application-tracker-ehz6.onrender.com/api/auth";
 
 // Register form
 const registerForm = document.getElementById("registerForm");
