@@ -10,6 +10,7 @@
   <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      <link rel="stylesheet" href="../css/global.css">
     />
 </head>
 
@@ -22,7 +23,7 @@
 
       <h1 class="auth-title">Create an account</h1>
       <p class="auth-subtitle">Sign up to start tracking your job applications</p>
-
+      <div id="globalMessage" class="global-message"></div>
       <form class="auth-form" id="registerForm">
 
         <label class="auth-label" for="fullName">Full Name</label>
@@ -34,6 +35,7 @@
         <small id="email-error" class="error-message"></small>
 
         <label class="auth-label" for="password">Password</label>
+       
 
     <div class="password-container">
      <input
@@ -79,6 +81,7 @@
 
     </section>
   </main>
+  <script src="../js/authHelpers.js"></script>
   <script src="../js/registerScene.js"></script>
 </body>
 </html>

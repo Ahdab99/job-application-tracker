@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reset Password - Job Applications Tracker</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/login.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+
+<body class="center-page">
+  <div id="globalMessage" class="global-message"></div>
+
+  <div class="card login-card">
+    <div class="login-logo">
+      <i class="fa-solid fa-lock"></i>
+    </div>
+
+    <h2 class="login-title text-center">Reset your password</h2>
+    <p class="login-subtitle text-center">
+      Enter your new password below
+    </p>
+
+    <form id="forgotResetForm">
+      <label>New Password</label>
+      <div class="password-container">
+        <input
+          type="password"
+          id="newPasswordInput"
+          class="input-field"
+          placeholder="••••••••"
+        />
+        <i class="fa-solid fa-eye-slash toggle-password" id="toggleNewPassword"></i>
+      </div>
+      <small class="error-message" id="newPasswordError"></small>
+
+      <label>Confirm New Password</label>
+      <div class="password-container">
+        <input
+          type="password"
+          id="confirmPasswordInput"
+          class="input-field"
+          placeholder="••••••••"
+        />
+        <i class="fa-solid fa-eye-slash toggle-password" id="toggleConfirmPassword"></i>
+      </div>
+      <small class="error-message" id="confirmPasswordError"></small>
+
+      <button type="submit" class="button-primary">Reset Password</button>
+
+      <p class="signup-text">
+        Back to
+        <a href="login.html" class="signup-link">Sign in</a>
+      </p>
+    </form>
+  </div>
+
+  <script src="../js/authHelpers.js"></script>
+  <script src="../js/forgotReset.js"></script>
+</body>
+</html>

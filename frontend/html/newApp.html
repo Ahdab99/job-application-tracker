@@ -10,7 +10,7 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+      <link rel="stylesheet" href="../css/global.css">
   </head>
 
   <body class="create-page">
@@ -21,6 +21,7 @@
       <i class="fa-solid fa-arrow-left"></i>
       Back to Dashboard
     </button>
+    <div id="globalMessage" class="global-message"></div>
   </div>
 
   <!-- Card Section -->
@@ -50,8 +51,8 @@
           <option value="rejected">Rejected</option>
         </select>
 
-        <label>Applied Date</label>
-        <input type="date" id="dateInput" />
+        <label>Applied Date <span>*</span></label>
+        <input type="date" id="dateInput" required />
 
         <div class="button-row">
           <button type="submit" class="button-primary">
@@ -67,6 +68,7 @@
       </form>
     </div>
   </div>
-
+  
+  <script src="../js/authHelpers.js"></script> 
   <script src="../js/newApp.js"></script>
 </body>
