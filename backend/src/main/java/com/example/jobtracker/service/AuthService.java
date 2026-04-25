@@ -23,6 +23,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.UUID;
 import java.time.LocalDateTime;
+import org.springframework.beans.factory.annotation.Value;
 
 @Service
 public class AuthService {
@@ -82,7 +83,7 @@ public class AuthService {
     user.setResetTokenExpiry(expiryTime);
     userRepository.save(user);
 
-    String resetLink = "http://127.0.0.1:5500/frontend/html/forgotReset.html?token=" + resetToken;
+    String resetLink = frontendUrl + "/frontend/html/forgotReset.html?token=" + resetToken;
     emailService.sendPasswordResetEmail(user.getEmail(), resetLink);
     return new ApiResponse("Password reset email sent successfully.");
     }
@@ -200,5 +201,8 @@ public class AuthService {
 
     return new ApiResponse("Password has been reset successfully");
     }
+
+    @Value("${app.frontend.url}")
+    private String frontendUrl;
     
 }
