@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8081/api/applications";
+const API_URL = "https://job-application-tracker-ehz6.onrender.com/api/applications";
 
 protectPage();
 

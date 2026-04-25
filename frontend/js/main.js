@@ -3,7 +3,7 @@ let applications = [];
 let currentPage = 1;
 const itemsPerPage = 4;
 
-const API_URL = "http://localhost:8081/api/applications";
+const API_URL = "https://job-application-tracker-ehz6.onrender.com/api/applications";
 
 protectPage();
 
@@ -64,7 +64,7 @@ async function fetchApplications() {
 }
 
 async function fetchCurrentUser() {
-    const response = await authorizedFetch("http://localhost:8081/api/auth/me", {
+    const response = await authorizedFetch("https://job-application-tracker-ehz6.onrender.com/api/auth/me", {
         method: "GET",
     });
 

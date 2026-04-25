@@ -1,4 +1,4 @@
-window.API_BASE_URL = "http://localhost:8081/api/auth";
+window.API_BASE_URL = "https://job-application-tracker-ehz6.onrender.com/api/auth";
 const TOKEN_KEY = "token";
 const EMAIL_KEY = "email";
 const AUTH_MESSAGE_KEY = "auth_message";
@@ -87,7 +87,7 @@ async function protectPage() {
     }
 
     try {
-        const response = await fetch("http://localhost:8081/api/auth/me", {
+        const response = await fetch("https://job-application-tracker-ehz6.onrender.com/api/auth/me", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`

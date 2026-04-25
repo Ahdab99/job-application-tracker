@@ -1,5 +1,4 @@
 protectPage();
-requireAuth();
 
 const profileNameInput = document.getElementById("profileName");
 const profileEmailInput = document.getElementById("profileEmail");
@@ -17,7 +16,7 @@ const updateBtn = document.getElementById("updateProfileBtn");
 const changePasswordBtn = document.getElementById("changePasswordBtn");
 
 async function fetchCurrentUserProfile() {
-    const response = await authorizedFetch("http://localhost:8081/api/auth/me", {
+    const response = await authorizedFetch("https://job-application-tracker-ehz6.onrender.com/api/auth/me", {
         method: "GET"
     });
 
@@ -29,7 +28,7 @@ async function fetchCurrentUserProfile() {
 }
 
 async function updateCurrentUserProfile(data) {
-    const response = await authorizedFetch("http://localhost:8081/api/auth/me", {
+    const response = await authorizedFetch("https://job-application-tracker-ehz6.onrender.com/api/auth/me", {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
@@ -49,7 +48,7 @@ async function uploadProfilePhoto(file) {
     const formData = new FormData();
     formData.append("file", file);
 
-    const response = await authorizedFetch("http://localhost:8081/api/auth/me/photo", {
+    const response = await authorizedFetch("https://job-application-tracker-ehz6.onrender.com/api/auth/me/photo", {
         method: "POST",
         body: formData
     });
@@ -91,7 +90,7 @@ async function loadProfile() {
         profileEmailInput.value = user.email || "";
 
         if (user.photoUrl) {
-            profileImage.src = `http://localhost:8081${user.photoUrl}?t=${Date.now()}`;
+            profileImage.src = `https://job-application-tracker-ehz6.onrender.com${user.photoUrl}?t=${Date.now()}`;
             profileImage.style.display = "block";
             avatarLetters.style.display = "none";
         } else {
@@ -154,7 +153,7 @@ cropBtn.addEventListener("click", function () {
             const updatedUser = await uploadProfilePhoto(file);
 
             if (updatedUser.photoUrl) {
-                profileImage.src = `http://localhost:8081${updatedUser.photoUrl}?t=${Date.now()}`;
+                profileImage.src = `https://job-application-tracker-ehz6.onrender.com${updatedUser.photoUrl}?t=${Date.now()}`;
                 profileImage.style.display = "block";
                 avatarLetters.style.display = "none";
             }
@@ -204,7 +203,7 @@ updateBtn.addEventListener("click", async function () {
 });
 
 async function resetPassword(data) {
-    const response = await authorizedFetch("http://localhost:8081/api/auth/reset-password", {
+    const response = await authorizedFetch("https://job-application-tracker-ehz6.onrender.com/api/auth/reset-password", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
